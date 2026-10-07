@@ -2,7 +2,9 @@ name: CE Alert
 
 on:
   schedule:
-    - cron: "*/5 * * * 0-5"     # every 5 min, Sunday to Friday (UTC), gold is closed on Saturday
+    - cron: "*/5 * * * 0-5"
+  repository_dispatch:
+    types: [tick]
   workflow_dispatch:
 
 permissions:
